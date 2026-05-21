@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'snownee.jade'
+version = '26.1.0'
+
+repositories {
+    mavenCentral()
+    maven { url = "https://repo.papermc.io/repository/maven-public/" }
+}
+
+dependencies {
+    compileOnly group: 'io.papermc.paper', name: 'paper-api', version: '1.21.6-R0.1-SNAPSHOT'
+    compileOnly group: 'io.netty', name: 'netty-buffer', version: '4.1.118.Final'
+    compileOnly group: 'io.netty', name: 'netty-transport', version: '4.1.118.Final'
+}
+
+processResources {
+    def props = [version: project.version]
+    inputs.properties props
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs.add('--enable-preview')
+}
+
+jar {
+    archiveClassifier.set('')
+}

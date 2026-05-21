@@ -1,0 +1,6 @@
+name: JadePlugin
+version: "${version}"
+main: jonyboylovespie.jade.plugin.JadePlugin
+api-version: "1.21"
+author: Jonyboylovespie
+description: Paper plugin that provides Jade server-side support for Fabric clients
