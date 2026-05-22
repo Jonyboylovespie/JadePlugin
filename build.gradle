@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group = 'snownee.jade'
-version = '26.1.0'
+group = 'jonyboylovespie.jade.plugin'
+version = '0.5.0'
 
 repositories {
     mavenCentral()
@@ -27,7 +27,6 @@ processResources {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.release = 21
-    options.compilerArgs.add('--enable-preview')
 }
 
 jar {
