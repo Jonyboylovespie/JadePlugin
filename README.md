@@ -74,7 +74,7 @@ The plugin intercepts Jade's custom network payloads using Paper's plugin messag
 - [X] `jade:registry_name` — Registry name
 - [X] `jade:block_properties` — Block properties
 - [X] `jade:block_states` — Block states
-- [X] `jade:loot_table` — Block loot table
+- [ ] `jade:loot_table` — Block loot table
 - [X] `jade:entity_attributes` — Entity attributes
 
 ## Build
