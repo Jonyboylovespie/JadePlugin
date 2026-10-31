@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'jonyboylovespie.jade.plugin'
-version = '0.5.0'
+version = '0.5.1'
 
 repositories {
     mavenCentral()
@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'io.papermc.paper', name: 'paper-api', version: '1.21.6-R0.1-SNAPSHOT'
+    compileOnly group: 'io.papermc.paper', name: 'paper-api', version: '26.3.build.235-stable'
     compileOnly group: 'io.netty', name: 'netty-buffer', version: '4.1.118.Final'
     compileOnly group: 'io.netty', name: 'netty-transport', version: '4.1.118.Final'
 }
@@ -26,7 +26,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-    options.release = 21
+    options.release = 25
 }
 
 jar {
